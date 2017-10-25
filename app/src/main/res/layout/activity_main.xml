@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="util.johndon.cmcc.com.news1.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_hegiht"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/tv_title"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/title_text_size"
+            android:text="@string/news_app_name"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_choose"
+            android:src="@drawable/ic_apps_black_24dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp" />
+    </RelativeLayout>
+    <com.androidkun.PullToRefreshRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_news"
+        android:layout_marginRight="@dimen/padding_rl"
+        android:layout_marginLeft="@dimen/padding_rl"/>
+
+</LinearLayout>
